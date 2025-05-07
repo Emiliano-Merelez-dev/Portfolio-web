@@ -1,0 +1,42 @@
+---
+// src/components/ProjectCard.astro
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  tech: string[];
+  demoLink: string;
+  codeLink: string;
+}
+
+const { title, description, image, tech, demoLink, codeLink } = Astro.props;
+---
+
+<div
+  class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all overflow-hidden"
+>
+  <img src={image} alt={title} class="w-full h-48 object-cover" />
+  <div class="p-4">
+    <h3 class="text-2xl font-bold text-gray-800">{title}</h3>
+    <p class="text-gray-600 mt-2">{description}</p>
+
+    <div class="flex flex-wrap gap-2 mt-3">
+      {
+        tech.map((t) => (
+          <span class="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded">
+            {t}
+          </span>
+        ))
+      }
+    </div>
+
+    <div class="mt-4 flex gap-4">
+      <a href={demoLink} target="_blank" class="text-blue-600 hover:underline"
+        >Demo</a
+      >
+      <a href={codeLink} target="_blank" class="text-blue-600 hover:underline"
+        >Código</a
+      >
+    </div>
+  </div>
+</div>

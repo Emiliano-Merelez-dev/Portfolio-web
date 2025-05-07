@@ -1,0 +1,45 @@
+---
+const skills = [
+  { nombre: "HTML", icono: "/icons/HTML5.png" },
+  { nombre: "CSS", icono: "/icons/CSS3.png" },
+  { nombre: "JavaScript", icono: "/icons/JavaScript.png" },
+  { nombre: "React", icono: "/icons/React.png" },
+  { nombre: "Next.js", icono: "/icons/Next.js.png" },
+  { nombre: "Tailwind", icono: "/icons/Tailwind.png" },
+  { nombre: "Astro", icono: "/icons/Astro.png" },
+  { nombre: "PostgreSQL", icono: "/icons/PostgreSQL.png" },
+  { nombre: "Git", icono: "/icons/Git.png" },
+  { nombre: "Jest", icono: "/icons/Jest.png" },
+  { nombre: "MongoDB", icono: "/icons/MongoDB.png" },
+  { nombre: "Node.js", icono: "/icons/Node.js.png" },
+];
+---
+
+<section id="skills" class="py-20 px-4 max-w-6xl mx-auto">
+  <div class="flex flex-col items-center mb-16 relative">
+    <h2
+      class="text-5xl font-extrabold text-center tracking-wide bg-gradient-to-r from-green-400 via-blue-400 to-purple-500 bg-clip-text text-transparent"
+    >
+      Skills
+    </h2>
+    <span
+      class="mt-2 w-20 h-1 bg-gradient-to-r from-green-400 via-blue-400 to-purple-500 rounded-full animate-pulse"
+    ></span>
+  </div>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 place-items-center"
+  >
+    {
+      skills.map((skill) => (
+        <div class="flex flex-col items-center bg-gray-800 p-4 rounded-xl shadow-md transition-transform duration-300 transform hover:scale-110 hover:shadow-[0_0_12px_#60A5FA] border border-transparent hover:border-blue-400">
+          <img
+            src={skill.icono}
+            alt={skill.nombre}
+            class="w-12 h-12 mb-2 transition-transform duration-300 hover:scale-110"
+          />
+          <p class="text-sm text-white">{skill.nombre}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

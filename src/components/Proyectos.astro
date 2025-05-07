@@ -1,0 +1,132 @@
+---
+const proyectos = [
+  {
+    titulo: "E-commerce App",
+    descripcion:
+      "E-commerce application developed with Next.js (App Router), using Server Actions, Tailwind CSS for a modern and responsive interface, Zustand for status management, and Prisma together with PostgreSQL for a robust relational database. It includes essential functionalities such as user authentication, dynamic shopping cart, payment simulation, and a complete administration panel to manage products and orders. It also implements stock control, pending order display, and secure authentication flows. Developed with a focus on best practices, scalable architecture and user experience, replicating a complete professional environment.",
+    tecnologias: ["Next.js", "Tailwind", "PostgreSQL", "Redux"],
+    demo: "https://tienda-em-shop.vercel.app/",
+    codigo: "https://github.com/Emiliano-Merelez-dev/Tienda-Online-Next",
+    imagen: "/images/2025-01-07 (4).png",
+  },
+  {
+    titulo: "Spotify Clone",
+    descripcion:
+      "Web application inspired by Spotify's user interface and user experience, developed using Astro as the main framework, with integration of React, HTML and Svelte components, demonstrating a hybrid and modern approach. The design was completely styled with Tailwind CSS, ensuring a clean, responsive and cross-device interface. It allows the loading and playback of songs, with a modular structure optimized for performance, scalability and easy maintenance. This project reflects an advanced mastery in integrating emerging technologies and building interactive experiences with a frontend focus.",
+    tecnologias: ["Astro", "React", "Tailwind", "Svelte"],
+    demo: "https://spotify-clone-psi-orcin.vercel.app/",
+    codigo: "https://github.com/Emiliano-Merelez-dev/Spotify-clone",
+    imagen: "/images/2025-04-29.png",
+  },
+  {
+    titulo: "Journal App",
+    descripcion:
+      "Web application designed to manage personal journal entries, built with React and Redux Toolkit for advanced global state management. It integrates Firebase Authentication for secure login and Cloud Firestore for persistent storage of notes, allowing to create, edit, delete and upload images associated with each entry. The interface was developed with Sass, achieving a clean and customized aesthetic, focused on user experience. This project implements complete authentication flows, dynamic content uploading and real-time synchronization, representing a modular, scalable and adaptable architecture for productive environments.",
+    tecnologias: ["React", "Redux", "Sass", "Firebase"],
+    demo: "https://react-journal-app-nine.vercel.app/",
+    codigo: "https://github.com/Emiliano-Merelez-dev/React-Journal-App",
+    imagen: "/images/2025-04-29 (1).png",
+  },
+  {
+    titulo: "GiftExpertApp",
+    descripcion:
+      "Lightweight application developed with React, which allows to search and view animated GIFs in real time through calls to the Giphy API. Its main strength lies in the implementation of a reusable Custom Hook that manages the search logic and external data consumption, promoting a clean and decoupled code. The interface was designed with CSS, offering a fast, responsive, and user-friendly experience.",
+    tecnologias: ["React", "CSS3"],
+    demo: "https://react-gifexpert-app-zeta.vercel.app/",
+    codigo: "https://github.com/Emiliano-Merelez-dev/React-gifexpert-app",
+    imagen: "/images/2025-01-07.png",
+  },
+  {
+    titulo: "Calendario MERN",
+    descripcion:
+      "Full Stack Calendar oriented to the management of events and personal agendas, developed with React, Redux and css in the Front-end, and a robust Back-end with Node.js, Express and MongoDB. It integrates a secure authentication system based on JSON Web Tokens (JWT), allowing users to create, edit and delete events in a personalized way. The modular structure of the project and its focus on separation of responsibilities ensure a scalable and maintainable solution, ideal for collaborative or personal environments.",
+    tecnologias: ["React", "Redux", "Node.js", "MongoDB", "Express"],
+    // demo: "https://calendar-full.vercel.app/",
+    codigo: "https://github.com/Emiliano-Merelez-dev/Calendar-App",
+    video: "/videos/calendarApp.mp4",
+  },
+  {
+    titulo: "Pokemons App",
+    descripcion:
+      "Modern website built with Next.js (App Router) that allows you to explore and manage a dynamic list of Pokémon. It uses Redux Toolkit for efficient global status management and Tailwind CSS to provide an attractive, responsive and consistent interface throughout the environment. It features an intuitive dashboard section from which Pokémon cards are displayed in an orderly fashion, with seamless search and navigation. This project implements solid principles of application architecture and user experience, standing out for its performance and code organization.",
+    tecnologias: ["Next.js", "Tailwind", "Redux"],
+    demo: "https://pokemon-app-alpha-wine.vercel.app/dashboard/pokemons",
+    codigo: "https://github.com/Emiliano-Merelez-dev/PokemonApp",
+    imagen: "/images/2025-04-29 (3).png",
+  },
+];
+---
+
+<section id="proyectos" class="py-20 px-4 max-w-7xl mx-auto">
+  <div class="flex flex-col items-center mb-16 relative">
+    <h2
+      class="text-5xl font-extrabold text-center tracking-wide bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+    >
+      Projects
+    </h2>
+    <span
+      class="mt-2 w-20 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-full animate-pulse"
+    ></span>
+  </div>
+  <div class="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-2">
+    {
+      proyectos.map((proyecto) => (
+        <div class="bg-gray-800 rounded-2xl shadow-md transform transition duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-xl overflow-hidden flex flex-col">
+          {proyecto.video ? (
+            <video
+              class="w-full h-48 object-cover"
+              src={proyecto.video}
+              controls
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            />
+          ) : (
+            <img
+              src={proyecto.imagen}
+              alt={`Imagen de ${proyecto.titulo}`}
+              class="w-full h-48 object-cover"
+            />
+          )}
+          <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">{proyecto.titulo}</h3>
+              <p class="text-gray-300 mb-4">{proyecto.descripcion}</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                {proyecto.tecnologias.map((tec) => (
+                  <span class="flex items-center gap-1 text-sm bg-gray-700 px-2 py-1 rounded-full">
+                    <img
+                      src={`/icons/${tec}.png`}
+                      alt={tec}
+                      class="w-4 h-4 object-contain"
+                    />
+                    {tec}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div class="flex justify-between">
+              {proyecto.demo && (
+                <a
+                  href={proyecto.demo}
+                  target="_blank"
+                  class="text-cyan-400 hover:underline"
+                >
+                  Demo
+                </a>
+              )}
+              <a
+                href={proyecto.codigo}
+                target="_blank"
+                class="text-cyan-400 hover:underline"
+              >
+                Código
+              </a>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,31 @@
+---
+import { SiAstro, SiTailwindcss, SiVercel } from "react-icons/si";
+---
+
+<footer
+  class="bg-gray-900 text-white border-t border-gray-700 py-8 mt-12 text-sm"
+>
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Columna izquierda -->
+    <div class="space-y-2 text-center md:text-left">
+      <div class="flex justify-center md:justify-start gap-4 text-xl"></div>
+      <div class="mt-2 space-y-1">
+        <p class="flex items-center gap-2 justify-center md:justify-start">
+          Built with <SiAstro className="text-purple-400" /> Astro
+        </p>
+        <p class="flex items-center gap-2 justify-center md:justify-start">
+          Designed with <SiTailwindcss className="text-cyan-400" /> TailwindCSS
+        </p>
+        <p class="flex items-center gap-2 justify-center md:justify-start">
+          Deployed in <SiVercel className="text-white" /> Vercel
+        </p>
+      </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="text-center md:text-right flex flex-col justify-center">
+      <p>Copyright © 2025 Emiliano Merelez.</p>
+      <p>All rights reserved.</p>
+    </div>
+  </div>
+</footer>
