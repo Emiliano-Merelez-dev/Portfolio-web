@@ -1,15 +1,15 @@
 ---
-
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 ---
 
 <section id="contacto" class="py-14 px-4 bg-gray-900 text-white">
   <div class="max-w-xl mx-auto text-center">
     <h2
-      class="text-4xl font-extrabold mb-6 text-blue-400 animate-pulse drop-shadow-lg"
+      class="text-4xl font-display mb-6 text-blue-400 animate-pulse drop-shadow-lg font-sans"
     >
       ✉️ ¡let's talk!
     </h2>
-    <p class="text-gray-400 mb-8">
+    <p class="text-gray-400 mb-8 font-sans">
       Do you have a project in mind? Leave your message below:
     </p>
 
@@ -23,7 +23,7 @@
         name="nombre"
         placeholder="your name"
         required
-        class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none"
+        class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none font-sans"
       />
 
       <input
@@ -31,7 +31,7 @@
         name="email"
         placeholder="your email"
         required
-        class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none"
+        class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none font-sans"
       />
 
       <textarea
@@ -39,15 +39,45 @@
         rows="4"
         placeholder="your message"
         required
-        class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none"
+        class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none font-sans"
       ></textarea>
 
       <button
         type="submit"
-        class="w-full py-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:brightness-110 transition rounded-lg font-semibold text-white"
+        class="w-full py-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:brightness-110 transition rounded-lg font-sans text-white"
       >
         🚀 Send message
       </button>
     </form>
+
+    <div class="my-8 border-t border-gray-700"></div>
+
+    <div class="space-y-4">
+      <p class="text-gray-300 text-lg font-semibold">or contact me also by:</p>
+      <div class="flex justify-center gap-6">
+        <a
+          href="https://github.com/Emiliano-Merelez-dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/icons/GitHub.png"
+            alt="GitHub"
+            class="w-8 h-8 bg-white rounded-full p-1 transition-transform duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_8px_#60A5FA]"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/emiliano-matias-merelez-300b86274/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/icons/LinkedIn.png"
+            alt="LinkedIn"
+            class="w-8 h-8 transition-transform duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_6px_#60A5FA] hover:brightness-125"
+          />
+        </a>
+      </div>
+    </div>
   </div>
 </section>

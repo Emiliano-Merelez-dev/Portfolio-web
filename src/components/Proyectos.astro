@@ -10,33 +10,6 @@ const proyectos = [
     imagen: "/images/2025-01-07 (4).png",
   },
   {
-    titulo: "Spotify Clone",
-    descripcion:
-      "Web application inspired by Spotify's user interface and user experience, developed using Astro as the main framework, with integration of React, HTML and Svelte components, demonstrating a hybrid and modern approach. The design was completely styled with Tailwind CSS, ensuring a clean, responsive and cross-device interface. It allows the loading and playback of songs, with a modular structure optimized for performance, scalability and easy maintenance. This project reflects an advanced mastery in integrating emerging technologies and building interactive experiences with a frontend focus.",
-    tecnologias: ["Astro", "React", "Tailwind", "Svelte"],
-    demo: "https://spotify-clone-psi-orcin.vercel.app/",
-    codigo: "https://github.com/Emiliano-Merelez-dev/Spotify-clone",
-    imagen: "/images/2025-04-29.png",
-  },
-  {
-    titulo: "Journal App",
-    descripcion:
-      "Web application designed to manage personal journal entries, built with React and Redux Toolkit for advanced global state management. It integrates Firebase Authentication for secure login and Cloud Firestore for persistent storage of notes, allowing to create, edit, delete and upload images associated with each entry. The interface was developed with Sass, achieving a clean and customized aesthetic, focused on user experience. This project implements complete authentication flows, dynamic content uploading and real-time synchronization, representing a modular, scalable and adaptable architecture for productive environments.",
-    tecnologias: ["React", "Redux", "Sass", "Firebase"],
-    demo: "https://react-journal-app-nine.vercel.app/",
-    codigo: "https://github.com/Emiliano-Merelez-dev/React-Journal-App",
-    imagen: "/images/2025-04-29 (1).png",
-  },
-  {
-    titulo: "GiftExpertApp",
-    descripcion:
-      "Lightweight application developed with React, which allows to search and view animated GIFs in real time through calls to the Giphy API. Its main strength lies in the implementation of a reusable Custom Hook that manages the search logic and external data consumption, promoting a clean and decoupled code. The interface was designed with CSS, offering a fast, responsive, and user-friendly experience.",
-    tecnologias: ["React", "CSS3"],
-    demo: "https://react-gifexpert-app-zeta.vercel.app/",
-    codigo: "https://github.com/Emiliano-Merelez-dev/React-gifexpert-app",
-    imagen: "/images/2025-01-07.png",
-  },
-  {
     titulo: "Calendario MERN",
     descripcion:
       "Full Stack Calendar oriented to the management of events and personal agendas, developed with React, Redux and css in the Front-end, and a robust Back-end with Node.js, Express and MongoDB. It integrates a secure authentication system based on JSON Web Tokens (JWT), allowing users to create, edit and delete events in a personalized way. The modular structure of the project and its focus on separation of responsibilities ensure a scalable and maintainable solution, ideal for collaborative or personal environments.",
@@ -44,6 +17,24 @@ const proyectos = [
     // demo: "https://calendar-full.vercel.app/",
     codigo: "https://github.com/Emiliano-Merelez-dev/Calendar-App",
     video: "/videos/calendarApp.mp4",
+  },
+  {
+    titulo: "Journal App",
+    descripcion:
+      "Web application designed to manage personal journal entries, built with React and Redux Toolkit for advanced global state management. It integrates Firebase Authentication for secure login and Cloud Firestore for persistent storage of notes, allowing to create, edit, delete and upload images associated with each entry. The interface was developed with Sass, achieving a clean and customized aesthetic, focused on user experience. This project implements complete authentication flows, dynamic content uploading and real-time synchronization, representing a modular, scalable and adaptable architecture for productive environments.",
+    tecnologias: ["React", "Redux", "Sass", "Firebase", "Jest"],
+    demo: "https://react-journal-app-nine.vercel.app/",
+    codigo: "https://github.com/Emiliano-Merelez-dev/React-Journal-App",
+    imagen: "/images/2025-04-29 (1).png",
+  },
+  {
+    titulo: "Spotify Clone",
+    descripcion:
+      "Web application inspired by Spotify's user interface and user experience, developed using Astro as the main framework, with integration of React, HTML and Svelte components, demonstrating a hybrid and modern approach. The design was completely styled with Tailwind CSS, ensuring a clean, responsive and cross-device interface. It allows the loading and playback of songs, with a modular structure optimized for performance, scalability and easy maintenance. This project reflects an advanced mastery in integrating emerging technologies and building interactive experiences with a frontend focus.",
+    tecnologias: ["Astro", "React", "Tailwind", "Svelte"],
+    demo: "https://spotify-clone-psi-orcin.vercel.app/",
+    codigo: "https://github.com/Emiliano-Merelez-dev/Spotify-clone",
+    imagen: "/images/2025-04-29.png",
   },
   {
     titulo: "Pokemons App",
@@ -54,13 +45,22 @@ const proyectos = [
     codigo: "https://github.com/Emiliano-Merelez-dev/PokemonApp",
     imagen: "/images/2025-04-29 (3).png",
   },
+  {
+    titulo: "GiftExpertApp",
+    descripcion:
+      "Lightweight application developed with React, which allows to search and view animated GIFs in real time through calls to the Giphy API. Its main strength lies in the implementation of a reusable Custom Hook that manages the search logic and external data consumption, promoting a clean and decoupled code. The interface was designed with CSS, offering a fast, responsive, and user-friendly experience.",
+    tecnologias: ["React", "CSS3"],
+    demo: "https://react-gifexpert-app-zeta.vercel.app/",
+    codigo: "https://github.com/Emiliano-Merelez-dev/React-gifexpert-app",
+    imagen: "/images/2025-01-07.png",
+  },
 ];
 ---
 
 <section id="proyectos" class="py-20 px-4 max-w-7xl mx-auto">
   <div class="flex flex-col items-center mb-16 relative">
     <h2
-      class="text-5xl font-extrabold text-center tracking-wide bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+      class="text-5xl font-display text-center tracking-wide bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
     >
       Projects
     </h2>
@@ -91,8 +91,8 @@ const proyectos = [
           )}
           <div class="p-6 flex flex-col flex-1 justify-between">
             <div>
-              <h3 class="text-2xl font-semibold mb-2">{proyecto.titulo}</h3>
-              <p class="text-gray-300 mb-4">{proyecto.descripcion}</p>
+              <h3 class="text-2xl font-sans mb-2">{proyecto.titulo}</h3>
+              <p class="text-gray-300 mb-4 font-sans">{proyecto.descripcion}</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 {proyecto.tecnologias.map((tec) => (
                   <span class="flex items-center gap-1 text-sm bg-gray-700 px-2 py-1 rounded-full">
@@ -111,7 +111,7 @@ const proyectos = [
                 <a
                   href={proyecto.demo}
                   target="_blank"
-                  class="text-cyan-400 hover:underline"
+                  class="text-cyan-400 hover:underline font-sans"
                 >
                   Demo
                 </a>
@@ -119,7 +119,7 @@ const proyectos = [
               <a
                 href={proyecto.codigo}
                 target="_blank"
-                class="text-cyan-400 hover:underline"
+                class="text-cyan-400 hover:underline font-sans"
               >
                 Código
               </a>

@@ -23,8 +23,8 @@ html, body {
 
 
 nav.scrolled {
-  padding-top: 0.5rem; /* py-2 */
+  padding-top: 0.5rem; 
   padding-bottom: 0.5rem;
-  background-color: rgba(17, 24, 39, 0.95); /* gris más opaco */
+  background-color: rgba(17, 24, 39, 0.95); 
 }
 
